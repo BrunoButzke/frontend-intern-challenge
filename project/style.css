@@ -18,13 +18,38 @@ html{
 	font-weight:normal;
 	margin-top:-1%;
 }
-.texto input{
-	color:  #ff6e15;
+.texto .animacao input{
+	position: relative;
+	display: inline-block;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	font-size:1.5em;
+	color:   #ff6e15;
 	border:0px;
-	border-bottom:1px solid #ff6e15;
+	border-bottom:2px solid #ff6e15;
 	background:none;
+	margin-top:4%;
 }
-.texto button{
+.animacao{
+  position: relative;
+  display: inline-block;
+}
+
+.animacao > [animacao_limpar] {
+	display:none;
+	color:white;
+	position: absolute;
+	bottom: 5px;
+	right: 0;
+	font-weight: bold;
+	font-size: 2.5em;
+	padding: 0 0.2em;
+	line-height: 1em;
+	cursor: pointer;
+}    
+		
+		
+.texto #botao{
 	margin:0px 0px 0px 5px;
 	color:white;
 	border:0px;
@@ -74,12 +99,14 @@ td:nth-child(odd){
 .hits p{
 	color:#777;
 	font-size:0.5em;
+	margin-bottom:4%;
 }
 .hits .hits_value{
 	margin-right:auto;
 	margin-left:auto;
 	border:1px;
 	background-color:white;
+	margin-top:2%;
 }
 .footer{
 	background-color:white;
@@ -135,8 +162,7 @@ td:nth-child(odd){
 	.hits .hits_value{
 		width:190px;
 	}
-	::-webkit-input-placeholder,.texto input{
-		font:futura, sans-serif;
+	::-webkit-input-placeholder, .texto .animacao input{
 		font-size:1.5em;
 		width:500px;
 		height:30px;
@@ -144,10 +170,10 @@ td:nth-child(odd){
 	.texto{
 		padding-top:11%;	
 	}
-	.texto button{
+	.texto #botao{
 		font-size:1.5em;
-		width:100px;
-		height:34px;
+		width:120px;
+		height:40px;
 	}
 	.texto p{
 		font-size:2.5em;
@@ -181,8 +207,7 @@ td:nth-child(odd){
 	.hits .hits_value{
 		width:170px;
 	}
-	::-webkit-input-placeholder,.texto input{
-		font:futura, sans-serif;
+	::-webkit-input-placeholder, .texto .animacao input{
 		font-size:1.5em;
 		width:420px;
 		height:28px;
@@ -190,7 +215,7 @@ td:nth-child(odd){
 	.texto{
 		padding-top:12%;	
 	}
-	.texto button{
+	.texto #botao{
 		font-size:1.5em;
 		width:100px;
 		height:34px;
@@ -228,8 +253,7 @@ td:nth-child(odd){
 	.hits .hits_value{
 		width:150px;
 	}
-	::-webkit-input-placeholder,.texto input{
-		font:futura, sans-serif;
+	::-webkit-input-placeholder, .texto .animacao input{
 		font-size:1.3em;
 		width:300px;
 		height:22px;
@@ -237,7 +261,7 @@ td:nth-child(odd){
 	.texto{
 		padding-top:13%;	
 	}
-	.texto button{
+	.texto #botao{
 		font-size:1.1em;
 		width:85px;
 		height:30px;
@@ -278,8 +302,7 @@ td:nth-child(odd){
 	.hits .hits_value{
 		width:120px;
 	}
-	::-webkit-input-placeholder,.texto input{
-		font:futura, sans-serif;
+	::-webkit-input-placeholder, .texto .animacao input{
 		font-size:1.2em;
 		width:200px;
 		height:19px;
@@ -287,7 +310,7 @@ td:nth-child(odd){
 	.texto{
 		padding-top:14.5%;	
 	}
-	.texto button{
+	.texto #botao{
 		font-size:1em;
 		width:70px;
 		height:25px;
@@ -328,8 +351,7 @@ td:nth-child(odd){
 	.hits .hits_value{
 		width:100px;
 	}
-	::-webkit-input-placeholder,.texto input{
-		font:futura, sans-serif;
+	::-webkit-input-placeholder, .texto .animacao input{
 		font-size:1em;
 		width:160px;
 		height:17px;
@@ -337,7 +359,7 @@ td:nth-child(odd){
 	.texto{
 		padding-top:16%;	
 	}
-	.texto button{
+	.texto #botao{
 		font-size:0.7em;
 		width:55px;
 		height:20px;
@@ -376,8 +398,7 @@ td:nth-child(odd){
 	.hits .hits_value{
 		width:60px;
 	}
-	::-webkit-input-placeholder,.texto input{
-		font:futura, sans-serif;
+	::-webkit-input-placeholder, .texto .animacao input{
 		font-size:0.7em;
 		width:120px;
 		height:15px;
@@ -385,7 +406,7 @@ td:nth-child(odd){
 	.texto{
 		padding-top:17%;	
 	}
-	.texto button{
+	.texto #botao{
 		font-size:0.1em;
 		width:45px;
 		height:15px;

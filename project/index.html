@@ -3,9 +3,55 @@
 	<head>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
 		<link rel="stylesheet" type="text/css" href="style.css" media="screen"  />
-		
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script>
+			$(document).ready(function() {
+			
+	
+				$("#botao").click(function() { 
+					ajax_animacao();
+				});
+				$("span").click(function() { 
+					limpar_link();
+				});
+			});
+			
+			
+	
+			
+			function ajax_animacao(){
+				if (document.getElementById("link").value != "") {
+					$('input').css('color', 'white');
+					document.getElementById("link").value="http://chr.dc/xyzxyz";
+					document.getElementById("botao").value="COPIAR";
+					$('span').show();
+				}
+				
+				$.ajax({
+			  type: "POST",
+			  dataType: "json",
+			  url: "https://github.com/BrunoButzke/frontend-intern-challenge/blob/Bruno-Butzke/Assets/urls.json",
+			  success: function(data) {
+
+				var url = data["url"];
+				alert(url);
+			  }
+			});
+				
+			}
+			
+			
+			function limpar_link(){
+				document.getElementById("link").value="";
+				$('input').css('color', 'white');
+				document.getElementById("botao").value="ENCURTAR";
+				$('span').hide();
+			}
+			
+			
+			
+		</script>
 	</head>
 	<body>
 		
@@ -20,8 +66,11 @@
 						Links são longos.Encurte os links que você deseja compartilhar,<br>
 						e acompanhe enquanto viajam através da internet.
 					</p>
-					<input type="text" placeholder="Cole o seu link aqui">
-					<button>ENCURTAR</button>
+					<div class="animacao">
+					  <input type="text" id="link" placeholder="Cole o seu link aqui">
+					  <span animacao_limpar>&times;</span>
+					</div>
+					<input type="button" value="ENCURTAR" id="botao">
 				</div>
 				<!--
 				<img src="../Assets/background-home.jpg">
