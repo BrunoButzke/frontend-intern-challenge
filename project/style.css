@@ -1,0 +1,405 @@
+html{
+
+	font-family: 'Roboto', sans-serif;
+	font-size: 62.5%;
+	font-weight: bold;
+	text-align: center;
+	color:#AA1423;
+}
+.container{
+	width:100%;
+	height:100%;
+}
+
+.texto{
+	font-family: 'Roboto Slab', serif;
+}
+.texto p{
+	font-weight:normal;
+	margin-top:-1%;
+}
+.texto input{
+	color:  #ff6e15;
+	border:0px;
+	border-bottom:1px solid #ff6e15;
+	background:none;
+}
+.texto button{
+	margin:0px 0px 0px 5px;
+	color:white;
+	border:0px;
+	background:#ff6e15;
+}
+
+::-webkit-input-placeholder {
+   color: #ff6e15;
+}
+
+
+.banner{
+	color:white;
+	text-align:center;
+	
+	
+		
+	background-image:url("../Assets/background-home.jpg");
+	background-size:100% 100%;
+}
+
+
+img {
+   max-width: 100%;
+}
+.info table{
+	
+	font-size:0.7em;
+	margin-right:auto;
+	margin-left:auto;
+	
+}
+td:nth-child(even){
+	text-align: right;
+	font-weight: normal;
+	color:gray;
+	border-bottom: 1px solid #ddd;
+}
+td:nth-child(odd){
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+.hits{
+	font-family: 'Roboto Slab', serif;
+	background-color:#EEE;
+}
+.hits p{
+	color:#777;
+	font-size:0.5em;
+}
+.hits .hits_value{
+	margin-right:auto;
+	margin-left:auto;
+	border:1px;
+	background-color:white;
+}
+.footer{
+	background-color:white;
+	color:#AA1423;
+}
+.footer table{
+	margin-right:auto;
+	margin-left:auto;
+}
+
+.seta{
+	background-color:#EEE;
+}
+
+.seta-baixo:before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+	width: 0; 
+	height: 0; 
+}
+
+
+
+
+
+
+
+
+
+@media only screen and  (min-width: 1300px) {
+    .info{
+        font-size: 4.5em;
+    }
+	.banner{
+		height:700px;
+	}
+	.hits{
+		 font-size: 3.5em;
+	}
+	.seta-baixo:before {
+		border-left: 40px solid transparent;
+		border-right: 40px solid transparent;
+		border-top: 40px solid white;
+	}
+	td:nth-child(even){
+		padding: 18px 0px 18px 120px;
+	}
+	td:nth-child(odd){
+		padding: 18px 120px 18px 0px;
+	}
+	.hits .hits_value{
+		width:190px;
+	}
+	::-webkit-input-placeholder,.texto input{
+		font:futura, sans-serif;
+		font-size:1.5em;
+		width:500px;
+		height:30px;
+	}
+	.texto{
+		padding-top:11%;	
+	}
+	.texto button{
+		font-size:1.5em;
+		width:100px;
+		height:34px;
+	}
+	.texto p{
+		font-size:2.5em;
+	}
+	.texto h1{
+		font-size:5em;
+	}
+}
+
+@media only screen and  (min-width: 1000px) and (max-width: 1300px) {
+    .info{
+        font-size: 3.5em;
+    }
+	.banner{
+		height:600px;
+	}
+	.hits{
+		 font-size: 3em;
+	}
+	.seta-baixo:before {
+		border-left: 35px solid transparent;
+		border-right: 35px solid transparent;
+		border-top: 35px solid white;
+	}
+	td:nth-child(even){
+		padding: 15px 0px 15px 100px;
+	}
+	td:nth-child(odd){
+		padding: 15px 100px 15px 0px;
+	}
+	.hits .hits_value{
+		width:170px;
+	}
+	::-webkit-input-placeholder,.texto input{
+		font:futura, sans-serif;
+		font-size:1.5em;
+		width:420px;
+		height:28px;
+	}
+	.texto{
+		padding-top:12%;	
+	}
+	.texto button{
+		font-size:1.5em;
+		width:100px;
+		height:34px;
+	}
+	.texto p{
+		font-size:2.5em;
+	}
+	.texto h1{
+		font-size:4.3em;
+	}
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+    .info{
+        font-size: 3em;
+    }
+	.banner{
+		height:450px;
+	}
+	.hits{
+		 font-size: 2.5em;
+	}
+	.seta-baixo:before {
+		border-left: 28px solid transparent;
+		border-right: 28px solid transparent;
+		border-top: 28px solid white;
+	}
+	td:nth-child(even){
+		padding: 12px 0px 12px 80px;
+	}
+	td:nth-child(odd){
+		padding: 12px 80px 12px 0px;
+	}
+	.hits .hits_value{
+		width:150px;
+	}
+	::-webkit-input-placeholder,.texto input{
+		font:futura, sans-serif;
+		font-size:1.3em;
+		width:300px;
+		height:22px;
+	}
+	.texto{
+		padding-top:13%;	
+	}
+	.texto button{
+		font-size:1.1em;
+		width:85px;
+		height:30px;
+	}
+	.texto p{
+		font-size:2em;
+	}
+	.texto h1{
+		font-size:3.5em;
+	}
+	.footer footer img{
+		 max-width: 40%;
+	}
+}
+
+
+@media only screen and (min-width: 520px) and (max-width: 768px) {
+    .info{
+        font-size: 2.5em;
+    }
+	.banner{
+		height:350px;
+	}
+	.hits{
+		 font-size: 2.0em;
+	}
+	.seta-baixo:before {
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-top: 20px solid white;
+	}
+	td:nth-child(even){
+		padding: 9px 0px 9px 60px;
+	}
+	td:nth-child(odd){
+		padding: 9px 60px 9px 0px;
+	}
+	.hits .hits_value{
+		width:120px;
+	}
+	::-webkit-input-placeholder,.texto input{
+		font:futura, sans-serif;
+		font-size:1.2em;
+		width:200px;
+		height:19px;
+	}
+	.texto{
+		padding-top:14.5%;	
+	}
+	.texto button{
+		font-size:1em;
+		width:70px;
+		height:25px;
+	}
+	.texto p{
+		font-size:1.6em;
+	}
+	.texto h1{
+		font-size:2.8em;
+	}
+	.footer footer img{
+		 max-width: 35%;
+	}
+}
+
+
+@media only screen and (min-width: 350px) and (max-width: 520px) {
+    .info{
+        font-size: 1.7em;
+    }
+	.banner{
+		height:260px;
+	}
+	.hits{
+		 font-size: 1.5em;
+	}
+	.seta-baixo:before {
+		border-left: 15px solid transparent;
+		border-right: 15px solid transparent;
+		border-top: 15px solid white;
+	}
+	td:nth-child(even){
+		padding: 7px 0px 7px 45px;
+	}
+	td:nth-child(odd){
+		padding: 7px 45px 7px 0px;
+	}
+	.hits .hits_value{
+		width:100px;
+	}
+	::-webkit-input-placeholder,.texto input{
+		font:futura, sans-serif;
+		font-size:1em;
+		width:160px;
+		height:17px;
+	}
+	.texto{
+		padding-top:16%;	
+	}
+	.texto button{
+		font-size:0.7em;
+		width:55px;
+		height:20px;
+	}
+	.texto p{
+		font-size:1.2em;
+	}
+	.texto h1{
+		font-size:2.1em;
+	}
+	.footer footer img{
+		 max-width: 30%;
+	}
+}
+@media only screen and (max-width: 350px) {
+    .info{
+        font-size: 1.2em;
+    }
+	.banner{
+		height:180px;
+	}
+	.hits{
+		 font-size: 1em;
+	}
+	.seta-baixo:before {
+		border-left: 10px solid transparent;
+		border-right: 10px solid transparent;
+		border-top: 10px solid white;
+	}
+	td:nth-child(even){
+		padding: 5px 0px 5px 30px;
+	}
+	td:nth-child(odd){
+		padding: 5px 30px 5px 0px;
+	}
+	.hits .hits_value{
+		width:60px;
+	}
+	::-webkit-input-placeholder,.texto input{
+		font:futura, sans-serif;
+		font-size:0.7em;
+		width:120px;
+		height:15px;
+	}
+	.texto{
+		padding-top:17%;	
+	}
+	.texto button{
+		font-size:0.1em;
+		width:45px;
+		height:15px;
+	}
+	.texto p{
+		font-size:0.9em
+	}
+	.texto h1{
+		font-size:1.5em;
+	}
+	.footer footer img,header img{
+		 max-width: 25%;
+	}
+	.footer{
+		height:5px;
+	}
+}
