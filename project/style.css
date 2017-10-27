@@ -11,6 +11,19 @@ html{
 	height:100%;
 }
 
+.banner{
+	color:white;
+	text-align:center;	
+	background-image:url("../Assets/background-home.jpg");
+	background-size:100% 100%;
+}
+
+.banner #botao{
+	margin:0px 0px 0px 5px;
+	color:white;
+	border:0px;
+	background:#ff6e15;
+}
 .texto{
 	font-family: 'Roboto Slab', serif;
 }
@@ -18,7 +31,11 @@ html{
 	font-weight:normal;
 	margin-top:-1%;
 }
-.texto .animacao input{
+.animacao{
+  position: relative;
+  display: inline-block;
+}
+.animacao input{
 	position: relative;
 	display: inline-block;
 	font-family: 'Roboto', sans-serif;
@@ -30,11 +47,6 @@ html{
 	background:none;
 	margin-top:4%;
 }
-.animacao{
-  position: relative;
-  display: inline-block;
-}
-
 .animacao > [animacao_limpar] {
 	display:none;
 	color:white;
@@ -47,30 +59,9 @@ html{
 	line-height: 1em;
 	cursor: pointer;
 }    
-		
-		
-.texto #botao{
-	margin:0px 0px 0px 5px;
-	color:white;
-	border:0px;
-	background:#ff6e15;
-}
-
 ::-webkit-input-placeholder {
    color: #ff6e15;
 }
-
-
-.banner{
-	color:white;
-	text-align:center;
-	
-	
-		
-	background-image:url("../Assets/background-home.jpg");
-	background-size:100% 100%;
-}
-
 
 img {
    max-width: 100%;
@@ -123,11 +114,10 @@ td:nth-child(odd){
 	font-size:1.2em;
 	
 }
-
+/*Triangulo branco acima de "Hits"*/
 .seta{
 	background-color:#EEE;
 }
-
 .seta-baixo:before {
 	content: "";
 	display: inline-block;
@@ -136,16 +126,56 @@ td:nth-child(odd){
 	width: 0; 
 	height: 0; 
 }
-
-
-
-
-
-
-
-
-
-@media only screen and  (min-width: 1300px) {
+/*Parte responsavél pelo layout responsivo*/
+/*PC*/
+@media only screen and  (min-width: 1600px){
+    .info{
+        font-size: 5.5em;
+    }
+	.banner{
+		height:800px;
+	}
+	.hits{
+		 font-size: 4.0em;
+	}
+	.seta-baixo:before {
+		border-left: 45px solid transparent;
+		border-right: 45px solid transparent;
+		border-top: 45px solid white;
+	}
+	td:nth-child(even){
+		padding: 20px 0px 20px 350px;
+		
+	}
+	td:nth-child(odd){
+		padding: 20px 350px 20px 0px;
+	}
+	.hits .hits_value{
+		width:210px;
+	}
+	::-webkit-input-placeholder, .animacao input{
+		font-size:1.6em;
+		width:550px;
+		height:33px;
+	}
+	
+	.texto{
+		padding-top:11%;	
+	}
+	.banner #botao{
+		font-size:1.8em;
+		width:140px;
+		height:45px;
+	}
+	.texto p{
+		font-size:2.8em;
+	}
+	.texto h1{
+		font-size:5.8em;
+	}
+}
+/*PC tela pequena e notebooks acima de 14 polegadas*/
+@media only screen and  (min-width: 1300px) and (max-width: 1600px) {
     .info{
         font-size: 4.5em;
     }
@@ -170,7 +200,7 @@ td:nth-child(odd){
 	.hits .hits_value{
 		width:190px;
 	}
-	::-webkit-input-placeholder, .texto .animacao input{
+	::-webkit-input-placeholder, .animacao input{
 		font-size:1.5em;
 		width:500px;
 		height:30px;
@@ -178,7 +208,7 @@ td:nth-child(odd){
 	.texto{
 		padding-top:11%;	
 	}
-	.texto #botao{
+	.banner #botao{
 		font-size:1.5em;
 		width:120px;
 		height:40px;
@@ -190,7 +220,7 @@ td:nth-child(odd){
 		font-size:5em;
 	}
 }
-
+/*notebooks até 14 polegadas*/
 @media only screen and  (min-width: 1000px) and (max-width: 1300px) {
     .info{
         font-size: 3.5em;
@@ -215,7 +245,7 @@ td:nth-child(odd){
 	.hits .hits_value{
 		width:170px;
 	}
-	::-webkit-input-placeholder, .texto .animacao input{
+	::-webkit-input-placeholder, .animacao input{
 		font-size:1.5em;
 		width:420px;
 		height:28px;
@@ -223,7 +253,7 @@ td:nth-child(odd){
 	.texto{
 		padding-top:12%;	
 	}
-	.texto #botao{
+	.banner #botao{
 		font-size:1.5em;
 		width:100px;
 		height:34px;
@@ -235,8 +265,7 @@ td:nth-child(odd){
 		font-size:4.3em;
 	}
 }
-
-
+/*tablets grandes e netbooks*/
 @media only screen and (min-width: 768px) and (max-width: 1000px) {
     .info{
         font-size: 3em;
@@ -261,7 +290,7 @@ td:nth-child(odd){
 	.hits .hits_value{
 		width:150px;
 	}
-	::-webkit-input-placeholder, .texto .animacao input{
+	::-webkit-input-placeholder, .animacao input{
 		font-size:1.3em;
 		width:300px;
 		height:22px;
@@ -269,7 +298,7 @@ td:nth-child(odd){
 	.texto{
 		padding-top:13%;	
 	}
-	.texto #botao{
+	.banner #botao{
 		font-size:1.1em;
 		width:85px;
 		height:30px;
@@ -284,8 +313,7 @@ td:nth-child(odd){
 		 max-width: 40%;
 	}
 }
-
-
+/*tablets*/
 @media only screen and (min-width: 520px) and (max-width: 768px) {
     .info{
         font-size: 2.5em;
@@ -310,7 +338,7 @@ td:nth-child(odd){
 	.hits .hits_value{
 		width:120px;
 	}
-	::-webkit-input-placeholder, .texto .animacao input{
+	::-webkit-input-placeholder, .animacao input{
 		font-size:1.2em;
 		width:200px;
 		height:19px;
@@ -318,7 +346,7 @@ td:nth-child(odd){
 	.texto{
 		padding-top:14.5%;	
 	}
-	.texto #botao{
+	.banner #botao{
 		font-size:1em;
 		width:70px;
 		height:25px;
@@ -333,8 +361,7 @@ td:nth-child(odd){
 		 max-width: 35%;
 	}
 }
-
-
+/*Telas celulares paisagem*/
 @media only screen and (min-width: 350px) and (max-width: 520px) {
     .info{
         font-size: 1.7em;
@@ -359,7 +386,7 @@ td:nth-child(odd){
 	.hits .hits_value{
 		width:100px;
 	}
-	::-webkit-input-placeholder, .texto .animacao input{
+	::-webkit-input-placeholder, .animacao input{
 		font-size:1em;
 		width:160px;
 		height:17px;
@@ -367,7 +394,7 @@ td:nth-child(odd){
 	.texto{
 		padding-top:16%;	
 	}
-	.texto #botao{
+	.banner #botao{
 		font-size:0.7em;
 		width:55px;
 		height:20px;
@@ -378,10 +405,11 @@ td:nth-child(odd){
 	.texto h1{
 		font-size:2.1em;
 	}
-	.footer footer img,{
+	.footer footer img{
 		 max-width: 30%;
 	}
 }
+/*Telas celulares retrato*/
 @media only screen and (max-width: 350px) {
     .info{
         font-size: 1.2em;
@@ -406,7 +434,7 @@ td:nth-child(odd){
 	.hits .hits_value{
 		width:60px;
 	}
-	::-webkit-input-placeholder, .texto .animacao input{
+	::-webkit-input-placeholder, .animacao input{
 		font-size:0.7em;
 		width:120px;
 		height:15px;
@@ -414,7 +442,7 @@ td:nth-child(odd){
 	.texto{
 		padding-top:17%;	
 	}
-	.texto #botao{
+	.banner #botao{
 		font-size:0.1em;
 		width:45px;
 		height:15px;
@@ -427,7 +455,6 @@ td:nth-child(odd){
 	}
 	.footer footer img,header img{
 		 max-width: 25%;
-		 
 	}
 	.footer table{
 		height:5px;

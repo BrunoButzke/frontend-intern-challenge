@@ -11,8 +11,10 @@ Documentação referente ao "Desafio estagiário: HTML/CSS/JS" o desafio propost
 ### Não tenho um servidor
 
 - Baixe e Instale o WampServer (se sua plataforma for Linux utilixe o Xamp) http://www.wampserver.com/en/  ;
-- após executalo, acesse-o a direita na barra de tarefas,vá em **Apache>Apache modules>headers_module**;
-- Vá novamente em Apache>httpd-vhosts.conf e cole o seguinte cogigo:
+- após executalo, acesse-o a direita na barra de tarefas,com o botão direito domouse acesse **Tools>Test port 80**;
+	- Se a resposta não for Apache, algum outro sistema esta usando a porta 80,clique em "Use a por other than 80" e digite 8080.
+- acesse o wamp com botão direito,vá em **Apache>Apache modules>headers_module**;
+- Vá novamente em **Apache>httpd-vhosts.conf** e cole o seguinte cogigo:
 <IfModule mod_headers.c>
 	Header set Access-Control-Allow-Origin: *
 </IfModule>
