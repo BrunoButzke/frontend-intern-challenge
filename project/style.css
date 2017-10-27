@@ -75,11 +75,16 @@ html{
 img {
    max-width: 100%;
 }
+.info{
+	margin-top:8%;
+	margin-bottom:10%;
+}
 .info table{
 	
 	font-size:0.7em;
 	margin-right:auto;
 	margin-left:auto;
+	
 	
 }
 td:nth-child(even){
@@ -115,6 +120,8 @@ td:nth-child(odd){
 .footer table{
 	margin-right:auto;
 	margin-left:auto;
+	font-size:1.2em;
+	
 }
 
 .seta{
@@ -154,10 +161,11 @@ td:nth-child(odd){
 		border-top: 40px solid white;
 	}
 	td:nth-child(even){
-		padding: 18px 0px 18px 120px;
+		padding: 18px 0px 18px 250px;
+		
 	}
 	td:nth-child(odd){
-		padding: 18px 120px 18px 0px;
+		padding: 18px 250px 18px 0px;
 	}
 	.hits .hits_value{
 		width:190px;
@@ -199,10 +207,10 @@ td:nth-child(odd){
 		border-top: 35px solid white;
 	}
 	td:nth-child(even){
-		padding: 15px 0px 15px 100px;
+		padding: 15px 0px 15px 200px;
 	}
 	td:nth-child(odd){
-		padding: 15px 100px 15px 0px;
+		padding: 15px 200px 15px 0px;
 	}
 	.hits .hits_value{
 		width:170px;
@@ -245,10 +253,10 @@ td:nth-child(odd){
 		border-top: 28px solid white;
 	}
 	td:nth-child(even){
-		padding: 12px 0px 12px 80px;
+		padding: 12px 0px 12px 180px;
 	}
 	td:nth-child(odd){
-		padding: 12px 80px 12px 0px;
+		padding: 12px 180px 12px 0px;
 	}
 	.hits .hits_value{
 		width:150px;
@@ -294,10 +302,10 @@ td:nth-child(odd){
 		border-top: 20px solid white;
 	}
 	td:nth-child(even){
-		padding: 9px 0px 9px 60px;
+		padding: 9px 0px 9px 120px;
 	}
 	td:nth-child(odd){
-		padding: 9px 60px 9px 0px;
+		padding: 9px 120px 9px 0px;
 	}
 	.hits .hits_value{
 		width:120px;
@@ -343,10 +351,10 @@ td:nth-child(odd){
 		border-top: 15px solid white;
 	}
 	td:nth-child(even){
-		padding: 7px 0px 7px 45px;
+		padding: 7px 0px 7px 80px;
 	}
 	td:nth-child(odd){
-		padding: 7px 45px 7px 0px;
+		padding: 7px 80px 7px 0px;
 	}
 	.hits .hits_value{
 		width:100px;
@@ -370,7 +378,7 @@ td:nth-child(odd){
 	.texto h1{
 		font-size:2.1em;
 	}
-	.footer footer img{
+	.footer footer img,{
 		 max-width: 30%;
 	}
 }
@@ -390,10 +398,10 @@ td:nth-child(odd){
 		border-top: 10px solid white;
 	}
 	td:nth-child(even){
-		padding: 5px 0px 5px 30px;
+		padding: 5px 0px 5px 50px;
 	}
 	td:nth-child(odd){
-		padding: 5px 30px 5px 0px;
+		padding: 5px 50px 5px 0px;
 	}
 	.hits .hits_value{
 		width:60px;
@@ -419,8 +427,9 @@ td:nth-child(odd){
 	}
 	.footer footer img,header img{
 		 max-width: 25%;
+		 
 	}
-	.footer{
+	.footer table{
 		height:5px;
 	}
 }

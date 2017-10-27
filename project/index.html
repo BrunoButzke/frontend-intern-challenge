@@ -1,25 +1,50 @@
-<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="style.css" media="screen"  />
 		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		
+		
+		
+		
 		<script>
+		
+
 			$(document).ready(function() {
 			
-	
+				$.getJSON("http://localhost/projeto/urls.json", function(data) {
+					
+				arr = data.sort(function(a,b) {
+				 return b["hits"] - a["hits"];
+				 });
+				var tabela="";
+				for(i=0;i<5;i++){
+					var url = arr[i]['shortUrl'];
+					var hits = arr[i]['hits'];
+					
+					tabela=tabela+"<tr><td>" + url +"</td><td>" + hits +"</td></tr>";
+					
+				}
+				table.innerHTML = tabela;
+				
+				});
+				
+				
 				$("#botao").click(function() { 
 					ajax_animacao();
 				});
 				$("span").click(function() { 
-					limpar_link();
+					var acao="clicou";
+					limpar_link(acao);
 				});
+				$("input").change(function() { 
+					var acao="apagou";
+					limpar_link(acao);
+				});
+				
 			});
-			
-			
-	
-			
+		
 			function ajax_animacao(){
 				if (document.getElementById("link").value != "") {
 					$('input').css('color', 'white');
@@ -28,36 +53,29 @@
 					$('span').show();
 				}
 				
-				$.ajax({
-			  type: "POST",
-			  dataType: "json",
-			  url: "https://github.com/BrunoButzke/frontend-intern-challenge/blob/Bruno-Butzke/Assets/urls.json",
-			  success: function(data) {
-
-				var url = data["url"];
-				alert(url);
-			  }
-			});
 				
+								
 			}
 			
 			
-			function limpar_link(){
+			function limpar_link(acao){
+			if((acao=="clicou") ||(acao=="apagou" && document.getElementById("link").value=="")){
 				document.getElementById("link").value="";
 				$('input').css('color', 'white');
 				document.getElementById("botao").value="ENCURTAR";
 				$('span').hide();
+				}
 			}
-			
-			
+								
+				
 			
 		</script>
 	</head>
 	<body>
+
 		
 		<div class="container">
 			<header><img src="../Assets/logo-chaordic.png"></header>
-			
 			
 			<div class="banner">
 				<div class="texto">
@@ -82,7 +100,7 @@
 				TOP 5
 				<br>
 				<br>
-				<table>
+				<table id="table">
 					<tr>
 						<td>http://chr.dc/xyzxyz</td>
 						<td>7.919</td>
