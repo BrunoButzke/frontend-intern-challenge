@@ -16,7 +16,7 @@ Documentação referente a "Desafio estagiário: HTML/CSS/JS" o desafio proposto
 	- Se a resposta não for Apache, algum outro sistema esta usando a porta 80, clique em "Use a port other than 80" e digite 8080;
 - acesse o wamp com botão direito,vá em **Apache>Apache modules>headers_module**;
 - Vá novamente em **Apache>httpd-vhosts.conf** e cole o seguinte cogigo:
-	-"<IfModule mod_headers.c> Header set Access-Control-Allow-Origin: * </IfModule>"
+	-'<IfModule mod_headers.c> Header set Access-Control-Allow-Origin: * </IfModule>'
     -entre as tags <VirtualHost *:80>...</VirtualHost *:80> salve e feche;
 - Reinicie o Wamp  em Restart All Services;
 - Acesse o diretorio C:\wamp64\www e crie uma pasta chamada "projeto" e armazene seu .json dentro da pasta;
