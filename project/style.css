@@ -1,17 +1,23 @@
 html{
-
+	
 	font-family: 'Roboto', sans-serif;
 	font-size: 62.5%;
 	font-weight: bold;
 	text-align: center;
 	color:#AA1423;
+	margin-left:-2.2%;
+
 }
 .container{
 	width:100%;
 	height:100%;
 }
+.container header{
+	padding:1%;
+}
 
 .banner{
+	margin-right:-8px;
 	color:white;
 	text-align:center;	
 	background-image:url("../Assets/background-home.jpg");
@@ -19,6 +25,7 @@ html{
 }
 
 .banner #botao{
+	font-weight: bold;
 	margin:0px 0px 0px 5px;
 	color:white;
 	border:0px;
@@ -69,9 +76,11 @@ img {
 .info{
 	margin-top:8%;
 	margin-bottom:10%;
+	font-family: 'Roboto Slab', serif;
+	
 }
 .info table{
-	
+	font-family: 'Roboto', sans-serif;
 	font-size:0.7em;
 	margin-right:auto;
 	margin-left:auto;
@@ -86,9 +95,11 @@ td:nth-child(even){
 }
 td:nth-child(odd){
 	text-align: left;
+	font-weight: bold;
 	border-bottom: 1px solid #ddd;
 }
 .hits{
+	margin-right:-8px;
 	font-family: 'Roboto Slab', serif;
 	background-color:#EEE;
 }
@@ -100,7 +111,7 @@ td:nth-child(odd){
 .hits .hits_value{
 	margin-right:auto;
 	margin-left:auto;
-	border:1px;
+	border:1px solid #ddd;
 	background-color:white;
 	margin-top:2%;
 }
@@ -116,6 +127,7 @@ td:nth-child(odd){
 }
 /*Triangulo branco acima de "Hits"*/
 .seta{
+	margin-right:-8px;
 	background-color:#EEE;
 }
 .seta-baixo:before {
@@ -202,7 +214,7 @@ td:nth-child(odd){
 	}
 	::-webkit-input-placeholder, .animacao input{
 		font-size:1.5em;
-		width:500px;
+		width:550px;
 		height:30px;
 	}
 	.texto{
@@ -214,7 +226,7 @@ td:nth-child(odd){
 		height:40px;
 	}
 	.texto p{
-		font-size:2.5em;
+		font-size:2.6em;
 	}
 	.texto h1{
 		font-size:5em;
@@ -247,7 +259,7 @@ td:nth-child(odd){
 	}
 	::-webkit-input-placeholder, .animacao input{
 		font-size:1.5em;
-		width:420px;
+		width:460px;
 		height:28px;
 	}
 	.texto{
@@ -292,7 +304,7 @@ td:nth-child(odd){
 	}
 	::-webkit-input-placeholder, .animacao input{
 		font-size:1.3em;
-		width:300px;
+		width:380px;
 		height:22px;
 	}
 	.texto{
@@ -340,7 +352,7 @@ td:nth-child(odd){
 	}
 	::-webkit-input-placeholder, .animacao input{
 		font-size:1.2em;
-		width:200px;
+		width:300px;
 		height:19px;
 	}
 	.texto{
@@ -388,7 +400,7 @@ td:nth-child(odd){
 	}
 	::-webkit-input-placeholder, .animacao input{
 		font-size:1em;
-		width:160px;
+		width:200px;
 		height:17px;
 	}
 	.texto{
@@ -435,12 +447,12 @@ td:nth-child(odd){
 		width:60px;
 	}
 	::-webkit-input-placeholder, .animacao input{
-		font-size:0.7em;
-		width:120px;
+		font-size:0.9em;
+		width:150px;
 		height:15px;
 	}
 	.texto{
-		padding-top:17%;	
+		padding-top:15%;	
 	}
 	.banner #botao{
 		font-size:0.1em;
@@ -448,7 +460,7 @@ td:nth-child(odd){
 		height:15px;
 	}
 	.texto p{
-		font-size:0.9em
+		font-size:1em
 	}
 	.texto h1{
 		font-size:1.5em;
