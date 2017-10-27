@@ -16,8 +16,8 @@ Documentação referente a "Desafio estagiário: HTML/CSS/JS" o desafio proposto
 	- Se a resposta não for Apache, algum outro sistema esta usando a porta 80, clique em "Use a port other than 80" e digite 8080;
 - acesse o wamp com botão direito,vá em **Apache>Apache modules>headers_module**;
 - Vá novamente em **Apache>httpd-vhosts.conf** e cole o seguinte cogigo:
-	-<"IfModule mod_headers.c> Header set Access-Control-Allow-Origin: * </IfModule">
-    -entre as tags <VirtualHost *:80>...</VirtualHost *:80> salve e feche;
+	- <"IfModule mod_headers.c> Header set Access-Control-Allow-Origin: * </IfModule">
+    - entre as tags <VirtualHost *:80>...</VirtualHost *:80> salve e feche;
 - Reinicie o Wamp  em Restart All Services;
 - Acesse o diretorio C:\wamp64\www e crie uma pasta chamada "projeto" e armazene seu .json dentro da pasta;
 - Lembre de alterar a url em "index.html" para ("http://localhost/projeto/urls.json") adicionando :8080 ao lado de "localhost" em caso de mudança da porta logica.
@@ -25,18 +25,18 @@ Documentação referente a "Desafio estagiário: HTML/CSS/JS" o desafio proposto
 ### Erro Json
 
 - Caso você tenha um servidor ou tenha seguido os passos em **Não tenho um servidor** e um erro referente ao cabeçalho apareceu é necessario que ocorra uma mudança de portas logicas (ex: trocar para :8080);
-- No WampServer basta acesssalo utilizando o botão esquerdo> Tools > Use a port other than 80, digite 8080 e confirme;
+- No WampServer basta acesssalo utilizando o **botão esquerdo> Tools > Use a port other than 80**, digite 8080 e confirme;
 - Reinicie o WampServer;
 - Não esqueça de dentro de "index.html" (na linha 16) adicionar a porta 8080 (ex: http://localhost:8080/projeto/urls.json).
 
 
 ### O Projeto conta com
 
-- Três aquivos sendo eles (.html,.css e .rm);
+- Três aquivos sendo eles (.html, .css e .rm);
 - A biblioteca jQuery (JavaScript);
 - Layout Responsivo;
 - Animação (encurtamento de link);
-- Lleitura de arquivo .json;
-- Comentarios indicativos moderados;
+- Leitura de arquivo .json;
+- Comentários indicativos moderados;
 
 
