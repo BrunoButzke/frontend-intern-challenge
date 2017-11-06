@@ -1,70 +1,20 @@
+<!-- 
+  HTML
+  
+- #table  : Tabela carregada em caso de arquivo json não existente ou não carregado; 
+- .Arrow  : Div responsável pelo efeito de triangulo invertido.
+
+-->
 <html>
 	<head>
 	
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
-		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
 		
 		<title>Desafio Frontend</title>
-		
-		<script>
-			$(document).ready(function() {
-			/*conecta com o servidor e busca informações json*/
-				$.getJSON("http://localhost/projeto/urls.json", function(data) {
-				//ordena e imprime o TOP 5 com base nas informações json
-					arr = data.sort(function(a,b) {
-					 return b["hits"] - a["hits"];
-					 });
-					var tabela="";
-					for(i=0;i<5;i++){
-						var url = arr[i]['shortUrl'];
-						var hits = arr[i]['hits'];
-						if(i!=4){
-							tabela=tabela+"<tr><td>" + url +"</td><td>" + hits +"</td></tr>";	
-						}else{
-							tabela=tabela+"<tr><td style='border: 0px;'>" + url +"</td><td style='border: 0px ;'>" + hits +"</td></tr>";	
-						}
-					}
-					table.innerHTML = tabela;
-				});
-				
-				//controles de animação 
-				$("#botao").click(function() { 
-					ajax_animacao();
-				});
-				$("span").click(function() { 
-					var acao="clicou";
-					limpar_link(acao);
-				});
-				$("input").change(function() { 
-					var acao="apagou";
-					limpar_link(acao);
-				});
-				
-			});
-			
-			function ajax_animacao(){
-				if (document.getElementById("link").value != "") {                //o botão só funciona se houver conteudo
-					$('input').css('color', 'white');                             //muda a cor do link exibido 
-					document.getElementById("link").value="http://chr.dc/xyzxyz"; //muda o link exibido
-					botao.innerText = "COPIAR";								      //muda o "nome" do botão
-					$('span').show();											  //exibe o X para apagar
-				}
-			}
-			
-			
-			function limpar_link(acao){
-			if((acao=="clicou") ||(acao=="apagou" && document.getElementById("link").value=="")){ //só ocorre se apertar o X ou apagar tudo e sair do input
-				document.getElementById("link").value="";										  //apaga link exibido caso ainda exista
-				$('input').css('color', '#ff6e15');												  //devolve a cor laranja
-				botao.innerText = "ENCURTAR";													  //devolve nome
-				$('span').hide();																  //esconde X
-				}
-			}	
-			
-		</script>
-		
+
 	</head>
 	<body>
 		<div class="container">
@@ -73,7 +23,7 @@
 			
 			<div class="banner">
 			
-				<div class="texto">
+				<div class="text">
 					<h1>Encurte seus links.</h1>
 					<p>
 						Links são longos.Encurte os links que você deseja compartilhar,<br>
@@ -81,20 +31,18 @@
 					</p>
 				</div>
 				
-				<div class="animacao">
-					<input type="text" name="link" id="link" placeholder="Cole o seu link aqui">
-					<span animacao_limpar>&times;</span>
+				<div class="animation">
+					<input type="text" name="link" id="link" placeholder="Cole o seu link aqui" onChange="limpar_link('apagou');">
+					<span name="clean" id="clean" class="clean_animation" onclick="limpar_link('clicou');">&times;</span>
 				</div>
 				
-				<button id="botao">ENCURTAR</button>
+				<button id="button" class="button" onclick="encurtar_link();">ENCURTAR</button>
 				
 			</div>
 			
 			<div class="info">
-			
 				TOP 5
 				<br><br>
-				<!-- Tabela carregada em caso do arquivo json não existir ou der erro de permissão-->
 				<table id="table"> 
 					<tr>
 						<td>http://chr.dc/xyzxyz</td>
@@ -117,16 +65,13 @@
 						<td style="border-bottom: 0px;">43</td>
 					</tr>
 				</table>
-				
 			</div>
-			
-			<!-- efeito de triangulo invertido acima de"hits"-->
-			<div class="seta">
-				<span class="seta-baixo"></span>
+		
+			<div class="arrow">
+				<span class="down-arrow"></span>
 			</div>
 			
 			<div class="hits">
-			
 				<br>HITS
 	
 				<div class="hits_value">35.713.571</div>

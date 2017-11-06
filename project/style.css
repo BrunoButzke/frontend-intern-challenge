@@ -1,509 +1,245 @@
+/*
+  CSS
+  
+- @media               	: Parte responsavél pelo layout responsivo;
+- .arrow e .down-arrow 	: Fazem o efeito de triangulo branco invertido;
+- .container           	: "Corpo" da pagina;
+- header e footer      	: Cabeçalho e rodapé respectivamente, responsáveis pelos logos;
+- .banner e .text      	: Responsaveis pela imagem e texto principais;
+- .animation            : Responsável pelo encurtador de links/animação;
+- .info                 : Responsável pelo TOP 5;
+- .hits					: Pré rodapé responsavel pelo contador de cliques (área cinza).
+
+*/
+
 html{
-	
-	font-family: 'Roboto', sans-serif;
-	font-size: 62.5%;
-	font-weight: bold;
-	text-align: center;
+	font-family:'Roboto', sans-serif;
+	font-size:62.5%;
+	font-size:0.63em;
+	font-weight:bold;
+	text-align:center;
 	color:#AA1423;
-	margin-left:-2.2%;
-
-}
-img {
-   max-width: 100%;
+	margin-left:-10px;
 }
 
-
-.container{
-	width:100%;
-	height:100%;
+a{
+	text-decoration:none;
+	color:#AA1423;
 }
+
 .container header{
-	padding:1%;
+	padding:5px;
 }
 
+header img{
+	max-width:10rem;
+}
 
 .banner{
+	height:63.5em;
 	margin-right:-8px;
-	color:white;
-	text-align:center;	
+	color:#FFFFFF;	
 	background-image:url("../Assets/background-home.jpg");
 	background-size:100% 100%;
 }
-.banner #botao{
-	font-weight: bold;
-	margin:0px 0px 0px 5px;
-	color:white;
+
+.banner .button{
+	font-weight:bold;
+	margin:0px 0px 0px 6px;
+	color:#FFFFFF;
 	border:0px;
 	background:#ff6e15;
-}
-
-
-.texto{
-	font-family: 'Roboto Slab', serif;
-}
-.texto p{
-	font-weight:normal;
-	margin-top:-1%;
-}   
-::-webkit-input-placeholder {
-   color: #ff6e15;
-}
-
-
-.animacao{
-  position: relative;
-  display: inline-block;
-}
-.animacao input{
-	position: relative;
-	display: inline-block;
-	font-family: 'Roboto', sans-serif;
-	font-weight: bold;
 	font-size:1.5em;
-	color:   #ff6e15;
+	width:10rem;
+	height:3.4rem;
+}
+
+.text{
+	font-family:'Roboto Slab', serif;
+	padding-top:10rem;	
+}
+
+.text p{
+	font-weight:normal;
+	font-size:2.5em;
+}
+
+.text h1{
+	font-size:4.3em;
+}
+
+.animation{
+	position:relative;
+	display:inline-block;
+}
+
+.animation input{
+	position:relative;
+	display:inline-block;
+	font-family:'Roboto', sans-serif;
+	font-weight:bold;
+	font-size:1.5em;
+	color:#ff6e15;
 	border:0px;
 	border-bottom:2px solid #ff6e15;
 	background:none;
-	margin-top:4%;
+	margin-top:5rem;
+	width:40rem;
+	height:2.8rem;
+	font-size:2em;
 }
-.animacao > [animacao_limpar] {
-	display:none;
-	color:white;
-	position: absolute;
-	bottom: 5px;
-	right: 0;
-	font-weight: bold;
-	font-size: 2.5em;
-	padding: 0 0.2em;
-	line-height: 1em;
-	cursor: pointer;
-} 
 
+::-webkit-input-placeholder{
+	color:#ff6e15;
+}
+
+.animation .clean_animation{
+	display:none;
+	color:#FFFFFF;
+	position:absolute;
+	bottom:5px;
+	right:0px;
+	font-weight:bold;
+	font-size:2.5em;
+	padding:0em 0.2em;
+	line-height:1em;
+	cursor:pointer;
+}
 
 .info{
-	margin-top:8%;
-	margin-bottom:10%;
-	font-family: 'Roboto Slab', serif;
-	
+	margin-top:10rem;
+	margin-bottom:10rem;
+	font-family:'Roboto Slab', serif;
+	font-size: 3.5em;
 }
+
 .info table{
-	font-family: 'Roboto', sans-serif;
+	font-family:'Roboto', sans-serif;
 	font-size:0.7em;
 	margin-right:auto;
 	margin-left:auto;
-	
-	
 }
+
 td:nth-child(even){
-	text-align: right;
-	font-weight: normal;
+	text-align:right;
+	font-weight:normal;
 	color:gray;
-	border-bottom: 1px solid #ddd;
+	border-bottom:1px solid #ddd;
+	padding: 1.5rem 0rem 1.5rem 17rem;
 }
+
 td:nth-child(odd){
-	text-align: left;
-	font-weight: bold;
-	border-bottom: 1px solid #ddd;
+	text-align:left;
+	font-weight:bold;
+	border-bottom:1px solid #ddd;
+	padding: 1.5rem 17rem 1.5rem 0rem;
 }
 
-
-
-/*Triangulo branco acima de "Hits"*/
-.seta{
+.arrow{
 	margin-right:-8px;
 	background-color:#EEE;
 }
-.seta-baixo:before {
-	content: "";
-	display: inline-block;
-	vertical-align: middle;
-	margin-right: 10px;
-	width: 0; 
-	height: 0; 
+
+.down-arrow:before{
+	content:"";
+	display:inline-block;
+	border-left: 3.5rem solid transparent;
+	border-right: 3.5rem solid transparent;
+	border-top: 3.5rem solid #FFFFFF;
 }
-
-
 
 .hits{
+	font-size: 3em;
 	margin-right:-8px;
-	font-family: 'Roboto Slab', serif;
-	background-color:#EEE;
+	font-family:'Roboto Slab', serif;
+	background-color: #EEE;
 }
+
 .hits p{
 	color:#777;
 	font-size:0.5em;
-	margin-bottom:4%;
+	margin-bottom:4rem;
 }
+
 .hits .hits_value{
+	width:17rem;
 	margin-right:auto;
 	margin-left:auto;
 	border:1px solid #ddd;
-	background-color:white;
-	margin-top:2%;
+	background-color:#FFFFFF;
+	margin-top:2rem;
 }
-
-
 
 .footer{
-	background-color:white;
+	background-color:#FFFFFF;
 	color:#AA1423;
 }
+
 .footer table{
 	margin-right:auto;
 	margin-left:auto;
 	font-size:1.2em;
 }
+
 .footer table td{
 	font-family: 'Roboto', sans-serif;
 	font-weight: normal;
 }
 
-
-/*Parte responsavél pelo layout responsivo*/
-/*PC*/
+.footer footer img{
+	max-width:2.5rem;
+}
+	
 @media only screen and  (min-width: 1600px){
-    
-	.banner{
-		height:800px;
-	}
-	.banner #botao{
-		font-size:1.8em;
-		width:140px;
-		height:45px;
-	}
-	.texto{
-		padding-top:11%;	
-	}
-	
-	.texto p{
-		font-size:2.8em;
-	}
-	.texto h1{
-		font-size:5.8em;
-	}
-	::-webkit-input-placeholder, .animacao input{
-		font-size:1.6em;
-		width:550px;
-		height:33px;
-	}
-	.info{
-        font-size: 5.5em;
-    }
-	td:nth-child(even){
-		padding: 20px 0px 20px 350px;
-		
-	}
-	td:nth-child(odd){
-		padding: 20px 350px 20px 0px;
-	}
-	.seta-baixo:before {
-		border-left: 45px solid transparent;
-		border-right: 45px solid transparent;
-		border-top: 45px solid white;
-	}
-	.hits{
-		 font-size: 4.0em;
-	}
-	.hits .hits_value{
-		width:210px;
+    html{
+		font-size:0.83em;
 	}
 }
-/*PC tela pequena e notebooks acima de 14 polegadas*/
+
 @media only screen and  (min-width: 1300px) and (max-width: 1600px) {
-    
-	.banner{
-		height:700px;
+    html{
+		font-size:0.73em;
 	}
-	.banner #botao{
-		font-size:1.5em;
-		width:120px;
-		height:40px;
-	}
-	.texto{
-		padding-top:11%;	
-	}
-	
-	.texto p{
-		font-size:2.6em;
-	}
-	.texto h1{
-		font-size:5em;
-	}
-	::-webkit-input-placeholder, .animacao input{
-		font-size:1.5em;
-		width:550px;
-		height:30px;
-	}
-	.info{
-        font-size: 4.5em;
-    }	
-	td:nth-child(even){
-		padding: 18px 0px 18px 250px;
-		
-	}
-	td:nth-child(odd){
-		padding: 18px 250px 18px 0px;
-	}
-	.seta-baixo:before {
-		border-left: 40px solid transparent;
-		border-right: 40px solid transparent;
-		border-top: 40px solid white;
-	}
-	.hits{
-		 font-size: 3.5em;
-	}
-	.hits .hits_value{
-		width:190px;
-	}
-	
 }
-/*notebooks até 14 polegadas*/
+
 @media only screen and  (min-width: 1000px) and (max-width: 1300px) {
-    
-	.banner{
-		height:600px;
+    html{
+		font-size:0.63em;
 	}
-	.banner #botao{
-		font-size:1.5em;
-		width:100px;
-		height:34px;
-	}
-	.texto{
-		padding-top:12%;	
-	}
-	.texto p{
-		font-size:2.5em;
-	}
-	.texto h1{
-		font-size:4.3em;
-	}
-	::-webkit-input-placeholder, .animacao input{
-		font-size:1.5em;
-		width:460px;
-		height:28px;
-	}
-	.info{
-        font-size: 3.5em;
-    }
-	td:nth-child(even){
-		padding: 15px 0px 15px 200px;
-	}
-	td:nth-child(odd){
-		padding: 15px 200px 15px 0px;
-	}
-	.seta-baixo:before {
-		border-left: 35px solid transparent;
-		border-right: 35px solid transparent;
-		border-top: 35px solid white;
-	}
-	.hits{
-		 font-size: 3em;
-	}
-	.hits .hits_value{
-		width:170px;
-	}
-	
 }
-/*tablets grandes e netbooks*/
+
 @media only screen and (min-width: 768px) and (max-width: 1000px) {
-    
-	.banner{
-		height:450px;
-	}
-	.banner #botao{
-		font-size:1.1em;
-		width:85px;
-		height:30px;
-	}
-	.texto{
-		padding-top:13%;	
-	}
-	.texto p{
-		font-size:2em;
-	}
-	.texto h1{
-		font-size:3.5em;
-	}
-	::-webkit-input-placeholder, .animacao input{
-		font-size:1.3em;
-		width:380px;
-		height:22px;
-	}
-	.info{
-        font-size: 3em;
-    }
-	td:nth-child(even){
-		padding: 12px 0px 12px 180px;
-	}
-	td:nth-child(odd){
-		padding: 12px 180px 12px 0px;
-	}
-	.seta-baixo:before {
-		border-left: 28px solid transparent;
-		border-right: 28px solid transparent;
-		border-top: 28px solid white;
-	}
-	.hits{
-		 font-size: 2.5em;
-	}
-	.hits .hits_value{
-		width:150px;
-	}
-	.footer footer img{
-		 max-width: 40%;
+    html{
+		font-size:0.53em;
 	}
 }
-/*tablets*/
+
 @media only screen and (min-width: 520px) and (max-width: 768px) {
-    
-	.banner{
-		height:340px;
-	}
-	.banner #botao{
-		font-size:1em;
-		width:70px;
-		height:25px;
-	}
-	.texto{
-		padding-top:14.5%;	
-	}
-	.texto p{
-		font-size:1.6em;
-	}
-	.texto h1{
-		font-size:2.8em;
-	}
-	::-webkit-input-placeholder, .animacao input{
-		font-size:1.2em;
-		width:300px;
-		height:19px;
-	}
-	.info{
-        font-size: 2.5em;
-    }
-	td:nth-child(even){
-		padding: 9px 0px 9px 120px;
-	}
-	td:nth-child(odd){
-		padding: 9px 120px 9px 0px;
-	}
-	.seta-baixo:before {
-		border-left: 20px solid transparent;
-		border-right: 20px solid transparent;
-		border-top: 20px solid white;
-	}
-	.hits{
-		 font-size: 2.0em;
-	}
-	.hits .hits_value{
-		width:120px;
-	}
-	.footer footer img{
-		 max-width: 35%;
+    html{
+		font-size:0.43em;
 	}
 }
-/*Telas celulares paisagem*/
-@media only screen and (min-width: 350px) and (max-width: 520px) {
-    header img{
-		 max-width: 20%;
+
+@media only screen and (min-width: 400px) and (max-width: 520px) {
+	html{
+		font-size:0.33em;
 	}
 	.banner{
-		height:240px;
-	}
-	.banner #botao{
-		font-size:0.7em;
-		width:55px;
-		height:20px;
-	}
-	.texto{
-		padding-top:14%;	
-	}
-	.texto p{
-		font-size:1.2em;
-	}
-	.texto h1{
-		font-size:2.1em;
-	}
-	::-webkit-input-placeholder, .animacao input{
-		font-size:1em;
-		width:200px;
-		height:17px;
-	}
-	.info{
-        font-size: 1.7em;
-    }
-	td:nth-child(even){
-		padding: 7px 0px 7px 80px;
-	}
-	td:nth-child(odd){
-		padding: 7px 80px 7px 0px;
-	}
-	.seta-baixo:before {
-		border-left: 15px solid transparent;
-		border-right: 15px solid transparent;
-		border-top: 15px solid white;
-	}
-	.hits{
-		 font-size: 1.5em;
-	}
-	.hits .hits_value{
-		width:100px;
-	}
-	.footer footer img{
-		 max-width: 30%;
+		height:50em;
 	}
 }
-/*Telas celulares retrato*/
-@media only screen and (max-width: 350px) {
-    header img{
-		 max-width: 15%;
+
+@media only screen and (max-width: 400px) {
+	html{
+		font-size:0.23em;
+	}
+	.animation input{
+		width:30rem;
 	}
 	.banner{
-		height:180px;
+		height:40em;
 	}
-	.banner #botao{
-		font-size:0.1em;
-		width:45px;
-		height:15px;
-	}
-	.texto{
-		padding-top:15%;	
-	}
-	.texto p{
-		font-size:1em
-	}
-	.texto h1{
-		font-size:1.5em;
-	}
-	::-webkit-input-placeholder, .animacao input{
-		font-size:0.9em;
-		width:150px;
-		height:15px;
-	}
-	.info{
-        font-size: 1.2em;
-    }
-	td:nth-child(even){
-		padding: 5px 0px 5px 50px;
-	}
-	td:nth-child(odd){
-		padding: 5px 50px 5px 0px;
-	}
-	.seta-baixo:before {
-		border-left: 10px solid transparent;
-		border-right: 10px solid transparent;
-		border-top: 10px solid white;
-	}
-	.hits{
-		 font-size: 1em;
-	}
-	.hits .hits_value{
-		width:60px;
-	}
-	.footer footer img{
-		 max-width: 25%;
-	}
-	.footer table{
-		height:5px;
+	.banner .button{
+		font-size:2em;
 	}
 }
